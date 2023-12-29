@@ -7,6 +7,7 @@ import {
   reset
  
 } from './counterslic.js';
+import './counter.css'
 
 function Counter() {
   const count = useSelector((state) => state.counter.count);
@@ -14,12 +15,12 @@ function Counter() {
 
 
   return (
-    <div>
-      <p>{count}</p>
-      <div>
-        <button onClick={()=>dispatch(increment())}>+</button>
-        <button onClick={()=>dispatch(decrement())}>-</button>
-        <button onClick={()=>dispatch(reset())}>reset</button>
+    <div  className='container'>
+      <p  className='counter'>{count}</p>
+      <div  className='buttons'>
+        <button className='button'  onClick={()=>dispatch(increment())}>+</button>
+        <button className='button' onClick={()=>dispatch(decrement())}>-</button>
+        <button className='button' onClick={()=>dispatch(reset())}>reset</button>
       </div>
     </div>
   )
